@@ -1,4 +1,4 @@
-package Code;
+package code;
 
 /**
  * 翻转二叉树
@@ -14,7 +14,7 @@ public class JZ27 {
         return root;
     }
 
-    public class TreeNode {
+    public static class TreeNode {
         int val;
         TreeNode left;
         TreeNode right;

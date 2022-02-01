@@ -1,4 +1,4 @@
-package Code;
+package code;
 
 /**
  * 二位数组中的查找

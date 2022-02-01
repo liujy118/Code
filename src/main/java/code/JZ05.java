@@ -1,4 +1,4 @@
-package Code;
+package code;
 
 /**
  * 剑指 Offer 05. 替换空格

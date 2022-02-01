@@ -1,4 +1,4 @@
-package Code;
+package code;
 
 /**
  * 斐波那契数列

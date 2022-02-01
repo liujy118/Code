@@ -1,14 +1,14 @@
-package Code;
+package code;
 
 /**
- 剑指 Offer 28. 对称的二叉树
+ * 剑指 Offer 28. 对称的二叉树
  */
 public class JZ28 {
     public boolean isSymmetric(TreeNode root) {
-        if (root == null){
+        if (root == null) {
             return true;
         }
-        return isSymmetricHelper(root.left,root.right);
+        return isSymmetricHelper(root.left, root.right);
     }
 
     public boolean isSymmetricHelper(TreeNode left, TreeNode right) {

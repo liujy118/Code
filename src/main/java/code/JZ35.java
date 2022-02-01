@@ -1,4 +1,4 @@
-package Code;
+package code;
 
 import java.util.HashMap;
 import java.util.LinkedList;
@@ -10,7 +10,7 @@ import java.util.Queue;
  */
 public class JZ35 {
 
-    class Node {
+    static class Node {
         int val;
         Node next;
         Node random;

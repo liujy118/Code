@@ -1,4 +1,4 @@
-package Code;
+package code;
 
 /**
  * 剑指 Offer 03. 数组中重复的数字
