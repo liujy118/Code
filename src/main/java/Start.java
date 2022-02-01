@@ -3,8 +3,9 @@ import code.JZ53;
 
 public class Start {
     public static void main(String[] args) {
-        JZ53 j = new JZ53();
-        int[] arr = new int[]{1,2,3};
-        System.out.println(j.search(arr,2));
+        int o1 = 3;
+        int o2 = 30;
+        System.out.println(o1 * (int) Math.pow(10, (int)Math.log10(o2)+1) + o2);
+        System.out.println(o2 * (int) Math.pow(10, (int)Math.log10(o1)+1) + o1);
     }
 }
