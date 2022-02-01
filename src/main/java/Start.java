@@ -1,9 +1,10 @@
 import code.JZ03;
+import code.JZ53;
 
 public class Start {
     public static void main(String[] args) {
-        JZ03 jz03 = new JZ03();
-        int[] arr = new int[]{3, 4, 2, 0, 0, 1};
-        System.out.println(jz03.findRepeatNumber(arr));
+        JZ53 j = new JZ53();
+        int[] arr = new int[]{1,2,3};
+        System.out.println(j.search(arr,2));
     }
 }
