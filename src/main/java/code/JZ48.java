@@ -16,18 +16,19 @@ public class JZ48 {
     private final Set<Character> set = new HashSet<>();
     private final Queue<Character> queue = new LinkedList<>();
     private int maxLength = 0;
+
     public int lengthOfLongestSubstring(String s) {
         char[] chars = s.toCharArray();
         for (int i = 0; i < chars.length; i++) {
-            if (!set.contains(chars[i])){
+            if (!set.contains(chars[i])) {
                 set.add(chars[i]);
                 queue.offer(chars[i]);
-            }else {
-                maxLength = Math.max(maxLength,set.size());
-                for (;;){
+            } else {
+                maxLength = Math.max(maxLength, set.size());
+                for (; ; ) {
                     Character c = queue.poll();
                     set.remove(c);
-                    if (c==chars[i]){
+                    if (c == chars[i]) {
                         set.add(chars[i]);
                         queue.offer(chars[i]);
                         break;
@@ -35,7 +36,7 @@ public class JZ48 {
                 }
             }
         }
-        maxLength = Math.max(maxLength,set.size());
+        maxLength = Math.max(maxLength, set.size());
         return maxLength;
     }
 }
