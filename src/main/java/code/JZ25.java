@@ -1,55 +1,46 @@
 package code;
 
-import java.util.Stack;
-
 /**
  * @Author Jingyu Liu
- * @Description 25. K 个一组翻转链表
- * @Date 2022/2/1 18:01
- * @EndTime 18.26
+ * @Description 剑指 Offer 25. 合并两个排序的链表
+ * @Mark
+ * @Date 2022/2/2 10:07
+ * @EndTime 10.14
  **/
 public class JZ25 {
-    public ListNode reverseKGroup(ListNode head, int k) {
-        if (k == 1) {
-            return head;
-        }
-        Stack<ListNode> stack = new Stack<>();
-        stack.push(head);
-        int i = k;
-        while (i > 1 && stack.peek() != null) {
-            i--;
-            if (stack.peek().next != null) {
-                stack.push(stack.peek().next);
+    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode head = new ListNode(0);
+        ListNode node = head;
+        while (l1 != null && l2 != null) {
+            if (l1.val > l2.val) {
+                node.next = l2;
+                node = node.next;
+                l2 = l2.next;
+            } else {
+                node.next = l1;
+                node = node.next;
+                l1 = l1.next;
             }
         }
-        if (stack.size() != k) {
-            return head;
+        if (l1 == null && l2 == null) {
+            return head.next;
         }
-        ListNode newHead = stack.peek();
-        ListNode nextHead = newHead.next;
-        ListNode node = stack.pop();
-        while (!stack.isEmpty()) {
-            node.next = stack.peek();
-            node = stack.pop();
+        if (l1 == null) {
+            node.next = l2;
         }
-        node.next = reverseKGroup(nextHead, k);
-        return newHead;
+        if (l2 == null) {
+            node.next = l1;
+        }
+        return head.next;
+
     }
 
     public class ListNode {
         int val;
         ListNode next;
 
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
+        ListNode(int x) {
+            val = x;
         }
     }
 }
