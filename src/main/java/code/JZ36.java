@@ -18,7 +18,7 @@ public class JZ36 {
         }
         treeToDoublyListHelper(root);
         node.right = head;
-        head.left =node;
+        head.left = node;
         while (head != node) {
             head.right.left = head;
             head = head.right;
