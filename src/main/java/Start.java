@@ -1,8 +1,8 @@
-import code.*;
+import QuestionCode.Question2_2;
 
 public class Start {
     public static void main(String[] args) {
-        JZ60 jz07 = new JZ60();
-        jz07.dicesProbability(2);
+        Question2_2 question3 = new Question2_2();
+        System.out.println(question3.solution("011100"));
     }
 }
