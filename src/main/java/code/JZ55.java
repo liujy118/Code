@@ -5,7 +5,7 @@ package code;
  * @Description 剑指 Offer 55 - I. 二叉树的深度
  * @Mark
  * @Date 2022/2/2 21:23
- * @EndTime
+ * @EndTime 21.25
  **/
 public class JZ55 {
     public int maxDepth(TreeNode root) {

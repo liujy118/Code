@@ -5,7 +5,7 @@ package code;
  * @Description 剑指 Offer 55 - II. 平衡二叉树
  * @Mark
  * @Date 2022/2/2 21:26
- * @EndTime
+ * @EndTime 21.28
  **/
 public class JZ55_2 {
     public boolean isBalanced(TreeNode root) {
