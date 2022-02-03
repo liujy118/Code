@@ -1,8 +1,10 @@
-import QuestionCode.Question2_2;
+import code.JZ57_2;
+
+import java.util.Arrays;
 
 public class Start {
     public static void main(String[] args) {
-        Question2_2 question3 = new Question2_2();
-        System.out.println(question3.solution("011100"));
+        JZ57_2 solution = new JZ57_2();
+        System.out.println(Arrays.deepToString(solution.findContinuousSequence(9)));
     }
 }
